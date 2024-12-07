@@ -23,9 +23,3 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
-
-
-
-# install projects
-
-git clone https://github.com/ronituohino/price-tracker.git
