@@ -1,13 +1,30 @@
 # raspberry-setup
 
-Contains a handy `run.sh` to set up a new raspberry pi with all of the software
-it needs to run stuff.
+- Download installer from: https://www.raspberrypi.com/software/
+- Open Imager and connect Raspberry SD to computer
+- Choose the light distro (no desktop)
+- Configure WiFi credentials and ssh (remember: username, password)
+- Write to SD and throw into Raspberry
 
-## Setting up
+Find raspberry from network e.g. using `nmap`:
 
-Download installer from [here](https://www.raspberrypi.com/software/) and add
-WiFi credentials. Write to SD and throw in the raspberry. `ssh` into it and run:
+```
+nmap -sP 192.168.50.0/24
+```
+
+Login to Raspberry
+```
+ssh <user>@192.168.50.** 
+```
+
+Get the installer script
+```
+wget https://raw.githubusercontent.com/ronituohino/raspberry-setup/refs/heads/main/run.sh
+```
+
+Install all the stuff
 ```
 bash run.sh
 ```
-Then you can start doing stuff!
+
+Enjoy! :)
