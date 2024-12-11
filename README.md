@@ -27,4 +27,21 @@ Install all the stuff
 bash run.sh
 ```
 
+## To change WiFi settings on reboot
+
+Save the following config as `wpa_supplicant.conf` to the root of `/boot`
+
+```
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=<Country Code>
+
+network={
+     ssid="<SSID>"
+     psk="<PASSWORD>"
+     scan_ssid=1
+}
+```
+
+
 Enjoy! :)
